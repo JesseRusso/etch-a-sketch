@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div>
+    <div class="banner">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div class="controls">
         <button id="reset-button">Reset</button>
         <div class="slider-container">
             <input type="range" min="16" max="100" value="16" class="slider" id="range">
+            <a id="slider-value">16</a>
         </div>
     </div>
     
-    <div id="grid-container">
-
+    <div id="grid-container" class="grid">
     </div>
 </body>
 <script src="script.js"></script>

@@ -1,22 +1,46 @@
+@font-face {
+    font-family: 'rondoregular';
+    src: url('./rondo-webfont.woff2') format('woff2'),
+         url('./rondo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html{
     box-sizing: border-box;
+    font-family: 'rondoregular', sans-serif;
 }
 body{
     margin: 0;
     width: 100%;
+    background-color: grey;
+}
+#grid-container div{
+    text-align: center;
 }
 #grid-container{
     display: grid;
     width: 600px;
     height: 600px;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
 }
-#grid-container div{
+.border{
     border: 1px solid black;
-    text-align: center;
-
+}
+.uncoloured{
+    background-color: white;
 }
 .coloured{
     background-color: black;
+}
+#slider-container{
+    display: flex;
+    flex-direction: row;
+}
+.slider{
+    width: fit-content;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-items: left;
 }

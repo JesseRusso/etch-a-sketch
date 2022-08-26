@@ -1,0 +1,12 @@
+
+
+
+
+@font-face {
+    font-family: 'rondoregular';
+    src: url('./rondo-webfont.woff2') format('woff2'),
+         url('./rondo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
