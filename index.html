@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" draggable="false">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
     <title>Etch-a-Sketch</title>
 </head>
+
 <body>
     <div class="banner">
-        <h1>Etch-a-Sketch</h1>
+        <h1>Etch A Sketch</h1>
     </div>
     <div class="controls">
         <button id="reset-button">Reset</button>
@@ -18,9 +22,12 @@
             <a id="slider-value">16</a>
         </div>
     </div>
-    
-    <div id="grid-container" class="grid">
+    <div class="grid-border">
+        <div id="grid-container" draggable="false" class="grid">
+        </div>
+        <a>Etch A Sketch</a>
     </div>
+
 </body>
 <script src="script.js"></script>
 </html>

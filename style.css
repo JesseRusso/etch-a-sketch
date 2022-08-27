@@ -1,19 +1,35 @@
-@font-face {
-    font-family: 'rondoregular';
-    src: url('./rondo-webfont.woff2') format('woff2'),
-         url('./rondo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
+@font-face {
+    font-family: 'rondo';
+    src: url("./font/rondo.ttf");
 }
 html{
     box-sizing: border-box;
-    font-family: 'rondoregular', sans-serif;
+    font-family: 'rondo', cursive;
 }
 body{
     margin: 0;
     width: 100%;
     background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner{
+    text-align: center;
+    font-size: xx-large;
+
+}
+.grid-border{
+    justify-self: center;
+    padding: 5vw 5vw 3vw 5vw;
+    border-radius: 3%;
+    background-color: red;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 2.5em;
+    color: gold;
 }
 #grid-container div{
     text-align: center;
@@ -22,12 +38,14 @@ body{
     display: grid;
     width: 600px;
     height: 600px;
+    border-radius: 10%;
 }
-.border{
+
+.cell-border{
     border: 1px solid black;
 }
 .uncoloured{
-    background-color: white;
+    background-color: lightgray;
 }
 .coloured{
     background-color: black;
