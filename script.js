@@ -5,8 +5,11 @@ let slider = document.getElementById("range");
 let sliderCount = document.getElementById("slider-value");
 const grid = document.getElementById("grid-container");
 
-document.body.onmousedown = () => (isDown = true);
 document.body.onmouseup = () => (isDown = false);
+document.body.onmousedown = () => (isDown = true);
+document.body.addEventListener("dragstart", (e) => {
+    e.preventDefault();
+});
 
 document.getElementById("reset-button").addEventListener("click",makeGrid);
 slider.addEventListener("change", function(){
@@ -23,13 +26,16 @@ function makeGrid(){
     for(let i = 0; i < size * size; i++){
         let div = document.createElement('div');
         div.className=`${i} uncoloured`;
-        div.setAttribute("draggable", "false")
-        div.addEventListener("mouseover", function(){
+        div.addEventListener("mouseover", function() {
             if(isDown){
                 div.classList.remove('uncoloured');
                 div.classList.add("coloured");
             }
         });
+        div.addEventListener("click", (e) =>{
+            div.classList.remove('uncoloured');
+            div.classList.add("coloured");
+        })
         gridArray.push(div);
         grid.appendChild(div);
     }

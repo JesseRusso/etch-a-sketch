@@ -3,6 +3,7 @@
     font-family: 'rondo';
     src: url("./font/rondo.ttf");
 }
+
 html{
     box-sizing: border-box;
     font-family: 'rondo', cursive;
@@ -22,7 +23,7 @@ body{
 }
 .grid-border{
     justify-self: center;
-    padding: 5vw 5vw 3vw 5vw;
+    padding: 65px 65px 40px 65px;
     border-radius: 3%;
     background-color: red;
     display: flex;
