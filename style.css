@@ -74,6 +74,16 @@ body{
     justify-content: space-between;
     margin-top: 20px;
 }
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+button{
+    font-family: 'monospace';
+    border-radius: 10px;
+    height: 3em;
+}
 .footer{
     font-family: monospace;
     font-size: 16px;
