@@ -53,8 +53,7 @@ function makeGrid() {
             if (isDown) {
                 switch (drawMode) {
                     case 0:
-                        div.classList.remove('uncoloured');
-                        div.classList.add('coloured');
+                        div.style.backgroundColor = 'black';
                         break;
                     case 1:
                         div.style.backgroundColor = `rgb(${randomColour()}, ${randomColour()}, ${randomColour()})`;
@@ -63,8 +62,7 @@ function makeGrid() {
                         div.style.backgroundColor = 'lightgray';
                         break;
                     default:
-                        div.classList.remove('uncoloured');
-                        div.classList.add('coloured');
+                        div.style.backgroundColor = 'black';
                         break;
                 }
             }
