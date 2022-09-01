@@ -31,6 +31,7 @@ function makeGrid() {
     for (let i = 0; i < size * size; i++) {
         let div = document.createElement('div');
         div.style.backgroundColor = 'lightgray';
+        div.classList.add('cell');
         div.addEventListener("mouseover", function () {
             if (isDown) {
                 switch (drawMode) {
@@ -50,7 +51,6 @@ function makeGrid() {
             }
         });
         div.addEventListener("mousedown", (e) => {
-            if (isDown) {
                 switch (drawMode) {
                     case 0:
                         div.style.backgroundColor = 'black';
@@ -65,7 +65,6 @@ function makeGrid() {
                         div.style.backgroundColor = 'black';
                         break;
                 }
-            }
         })
         gridArray.push(div);
         grid.appendChild(div);
