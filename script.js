@@ -13,9 +13,9 @@ document.body.addEventListener("dragstart", (e) => {
 });
 
 document.getElementById("reset-button").addEventListener("click", makeGrid);
-document.getElementById("erase-button").addEventListener("click", (e) => {drawMode = 2});
-document.getElementById("rainbow-button").addEventListener("click", (e) => {drawMode = 1});
-document.getElementById("black-button").addEventListener("click", (e) => {drawMode = 0});
+document.getElementById("erase-button").addEventListener("click", (e) => { drawMode = 2 });
+document.getElementById("rainbow-button").addEventListener("click", (e) => { drawMode = 1 });
+document.getElementById("black-button").addEventListener("click", (e) => { drawMode = 0 });
 slider.addEventListener("change", function () {
     size = slider.value;
     //sliderCount.innerText = slider.value;
@@ -51,20 +51,20 @@ function makeGrid() {
             }
         });
         div.addEventListener("mousedown", (e) => {
-                switch (drawMode) {
-                    case 0:
-                        div.style.backgroundColor = 'black';
-                        break;
-                    case 1:
-                        div.style.backgroundColor = `rgb(${randomColour()}, ${randomColour()}, ${randomColour()})`;
-                        break;
-                    case 2:
-                        div.style.backgroundColor = 'lightgray';
-                        break;
-                    default:
-                        div.style.backgroundColor = 'black';
-                        break;
-                }
+            switch (drawMode) {
+                case 0:
+                    div.style.backgroundColor = 'black';
+                    break;
+                case 1:
+                    div.style.backgroundColor = `rgb(${randomColour()}, ${randomColour()}, ${randomColour()})`;
+                    break;
+                case 2:
+                    div.style.backgroundColor = 'lightgray';
+                    break;
+                default:
+                    div.style.backgroundColor = 'black';
+                    break;
+            }
         })
         gridArray.push(div);
         grid.appendChild(div);
@@ -79,18 +79,4 @@ function clearGrid(element) {
 function randomColour() {
     let randomRGB = Math.floor(Math.random() * 255) + 1;
     return randomRGB;
-}
-function draw(div) {
-
-    switch (drawMode) {
-        case 0:
-            div.classList.remove('uncoloured');
-            div.classList.add('coloured');
-            break;
-        case 1:
-        default:
-            div.classList.remove('uncoloured');
-            div.classList.add('coloured');
-            break;
-    }
 }

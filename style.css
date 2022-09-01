@@ -6,31 +6,32 @@
 
 html{
     box-sizing: border-box;
-    font-family: 'rondo', cursive;
 }
 body{
     margin: 0;
     width: 100%;
     height:  100vh;
-    background-color: grey;
+    background-color: #b8aec8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .banner{
+    font-family: 'rondo', cursive;
     text-align: center;
     font-size: 42px;
-    color: gold;
+    color: #faa405;
     padding: 10px 0 10px 0;
 }
 .grid-border{
     justify-self: center;
     padding: 0 65px 20px 65px;
     border-radius: 40px;
-    background-color: red;
+    background-color: #d41500;
     color:lightgray;
     margin-top: 5vh;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 #slider-value{
     font-size: 16px;
@@ -62,7 +63,7 @@ body{
     font-size: 36px;
 }
 .slider{
-    width: 150px;
+    width: 125px;
 }
 .controls{
     width:600px;
@@ -77,10 +78,28 @@ body{
     gap: 8px;
 }
 button{
+    display:inline-block;
     font-family: 'monospace';
-    border-radius: 10px;
-    height: 3em;
+    border-radius: 20%;
+    height: 4em;
+    width: 4em;
     font-weight: 500;
+    font-size: 12px;
+    border-radius: 50%;
+    border-style: none;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+.color-picker{
+    display: none;
+}
+#black-button{
+    background-color: black;
+    border-color: black;
+}
+#erase-button{
+    background-color: lightgray;
+    border-color: lightgrey;
+    color: lightgrey;
 }
 .footer{
     font-family: monospace;
