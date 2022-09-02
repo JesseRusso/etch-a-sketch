@@ -14,7 +14,9 @@ document.body.addEventListener("dragstart", (e) => {
     e.preventDefault();
 });
 //Event listeners for buttons and grid size slider
-document.getElementById("reset-button").addEventListener("click", makeGrid);
+document.getElementById("reset-button").addEventListener("click", (e) => {
+    makeGrid();
+});
 eraserButton.addEventListener("click", (e) => {
     resetButtons();
     eraserButton.classList.add("selected");
@@ -37,7 +39,6 @@ makeGrid()
 function makeGrid() {
     gridArray.forEach(clearCell);
     gridArray = [];
-    drawMode = 0;
     for (let i = 0; i < size * size; i++) {
         let div = document.createElement('div');
         div.style.backgroundColor = 'lightgray';
